@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  #root route
+  root to: 'application#home'
+  
   resources :items
   resources :lists
   resources :users, except: [:new]
