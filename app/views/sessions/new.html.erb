@@ -1,5 +1,7 @@
 <%= form_for @user do |f| %>
-    <% f.text_field :email %>
-    <% f.password_field :password %>
-    <% f.submit "Log In" %>
+    Email:<br />
+    <%= f.text_field :email %><br />
+    Password:<br />
+    <%= f.password_field :password %><br /><br />
+    <%= f.submit "Log In" %>
 <% end %>
