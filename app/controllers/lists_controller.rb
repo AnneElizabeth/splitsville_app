@@ -3,6 +3,8 @@ class ListsController < ApplicationController
 #create
     def new
         @list = List.new
+        @list.title = params[:title]
+        redirect_to list_path(@list)
     end
 
 #read
@@ -22,7 +24,7 @@ class ListsController < ApplicationController
     end 
 
 #delete
-    def define 
+    def delete 
     end
 
   private
@@ -31,5 +33,5 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:title, :items)
   end
-  
+
 end
